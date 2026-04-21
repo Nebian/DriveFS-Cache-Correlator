@@ -3,7 +3,7 @@ PowerShell script that maps Google DriveFS cached files back to their original n
 
 ## Usage
 ```powershell
-.\drivefs_cache_correlator.ps1 -Path <sqlite_db_path> -Filename <cache_id>
+.\DriveFSCacheCorrelator.ps1 -Path <sqlite_db_path> -Filename <cache_id>
 ```
 ## How it works
 
