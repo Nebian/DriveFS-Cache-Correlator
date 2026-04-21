@@ -7,8 +7,10 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 function Show-Usage {
+    Write-Output ""
     $scriptName = Split-Path -Leaf $PSCommandPath
     Write-Output ("Usage: .\{0} -Path <sqlite_db_path> -Filename <cache_id>" -f $scriptName)
+    Write-Output ""
 }
 
 function Write-VerticalResults {
