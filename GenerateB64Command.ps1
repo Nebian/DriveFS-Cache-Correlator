@@ -1,5 +1,5 @@
 # Run locally on your own machine to generate a clipboard-ready command
-$scriptPath = ".\drive_detections.ps1"
+$scriptPath = ".\DriveFSCacheCorrelator.ps1"
 $scriptText = Get-Content $scriptPath -Raw
 
 $bytes = [Text.Encoding]::UTF8.GetBytes($scriptText)
