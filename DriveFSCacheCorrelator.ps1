@@ -1,12 +1,8 @@
-# Script inputs:
-# - Path: SQLite database file to parse
-# - Filename: Google Drive content cache ID to resolve via item_properties -> items
 param(
     [string]$Path,
     [UInt64]$Filename
 )
 
-# Fail fast on mistakes and parsing errors
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
@@ -33,8 +29,6 @@ function Write-VerticalResults {
     }
 }
 
-
-# Read raw bytes from a file at a specific offset
 function Read-At {
     param(
         [System.IO.FileStream]$Stream,
@@ -53,8 +47,7 @@ function Read-At {
         }
         $read += $n
     }
-
-    # Returns the bytes
+    
     return , $buffer
 }
 
