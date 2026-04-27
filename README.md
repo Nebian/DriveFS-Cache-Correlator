@@ -11,7 +11,7 @@ PowerShell script that maps Google DriveFS cached files back to their original n
 # Old Powershell - (Requires NuGet package manager)
 Install-Script -Name DriveFSCacheCorrelator -Scope CurrentUser
 ```
-```
+```powershell
 # Powershell v7+
 Install-PSResource -Name DriveFSCacheCorrelator -Scope CurrentUser -TrustRepository
 ```
