@@ -5,6 +5,17 @@ PowerShell script that maps Google DriveFS cached files back to their original n
 ```powershell
 .\DriveFSCacheCorrelator.ps1 -Path <sqlite_db_path> -Filename <cache_id>
 ```
+
+## Available on PSGallery!
+```powershell
+# Old Powershell - (Requires NuGet package manager)
+Install-Script -Name DriveFSCacheCorrelator -Scope CurrentUser
+```
+```
+# Powershell v7+
+Install-PSResource -Name DriveFSCacheCorrelator -Scope CurrentUser -TrustRepository
+```
+
 ## How it works
 
 The script reconstructs the current SQLite view from the main database and its WAL, then searches `item_properties` for `content-entry` blobs whose protobuf field 1 matches the target cache ID. The matched `item_stable_id` values are then joined against `items` to retrieve file metadata.
